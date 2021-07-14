@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color:darkgrey;
+}
+.header{
+    height: 60px;
+    background-color: white; 
+}
+
+.header .header_content{
+    /* border: 1px solid black; */
+    width: 1260px;
+    /* background-color: seashell; */
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header .header_content .logo {
+    height: 60px;
+    float: left; /*因为这个logo与右边的菜单列表并列显示，所以加个浮动*/
+}
+.header .header_content #smile{
+    float: left;
+    margin-left: 580px;
+}
+
+.header .header_content .nav li{
+    list-style: none;
+    float: left;
+    width: 114px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.header .header_content .nav li:hover{
+    border-bottom: 2px solid #0084ff;
+    box-sizing: border-box;
+}
+
+.header .header_content .nav li a{
+    color: black;
+    text-decoration: none;
+}
+
+.header .header_content .nav .active{
+    border-bottom: 2px solid #0084ff;
+    box-sizing: border-box; /*让border的部分在盒子的内部显示，不会吧下面的内容挤跑*/
+}
+
+.container{
+    width: 1260px;
+    /* background-color: white; */
+    margin: 10px auto;
+}
+
+.container .content{
+    /* height: 2000px; */
+    width: 956px;
+    float: left;
+    background-color: white;
+}
+
+.container .content .ex-header{
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+.container .content .ex-header h3{
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+
+.list img{
+    border: 1px solid #bfa;
+    box-sizing: border-box;
+    width: 250px;
+    float: left;
+}
+.list .detail{
+    float: left;
+    margin-left: 10px;
+}
+.list .detail p{
+    font-size: 14px;
+}
+.list .detail .link_button{
+    border-radius: 5px;
+    background-color:lightseagreen;
+    width: 100px;
+    height: 30px;
+}
+.list .detail .link_button a{
+    text-decoration: none;
+    color: black;
+    line-height: 30px;
+    text-align: center;
+}
+
+.list li{
+    list-style: none;
+    margin: 10px 0px;
+}
+.list .detail a{
+    text-decoration: none;
+    /* vertical-align: bottom; */
+}
+
+.container .slider{
+    position: fixed;
+    width: 290px;
+    /* float: right; */
+    right: 160px;
+    background-color: white;
+}
+.clear::after, .clear::before{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.backToTop{
+    padding: 3px;
+    text-align: center;
+    /* border: 1px solid #0084ff; */
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
