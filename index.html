@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>还原设计稿</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
 </head>
 <body>
     <div class="header">
@@ -91,7 +92,7 @@
                     <hr>
                     <li class="clear">
                         <div class="img">
-                            <img src="./images/_vwork15pro8.jpg" alt="">
+                            <img src="./images/vwork15pro8.jpg" alt="">
                         </div>
                         <div class="detail">
                             <h3>VMWare Workstation 15 & keys</h3>
@@ -132,9 +133,29 @@
             </div>
         </div>
         <div class="slider">
-            <h2>HTML/CSS尝试</h2>
-            <p>列举一些保存的资源，主要目的是尝试编写HTML和CSS，未涉及JS内容，上方按钮功能暂无
-            </p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./images/1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/3.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./images/4.png" alt="">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <h1>emmm</h1>
+            <p>ttttttttttttttttttt</p>
         </div>
     </div>
 
@@ -150,10 +171,56 @@
             </a>
         </div>
         <div class="toTop">
-            <a href="#">
-                <img src="./images/返回顶部.png" alt="">
-            </a>
+            <img src="./images/返回顶部.png" alt="">
         </div>
     </div>
+
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        new Swiper(".swiper-container", {
+            // direction: 'vertical', // 垂直切换选项
+            loop:true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 2000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true,
+            },
+            // effect: 'fade',
+        });
+        let btn = document.querySelector(".toTop");
+        btn.onclick = function(){
+            window.scrollTo(0,0);
+        };
+        let timer = null;
+        function throttle(fn){
+            let mark = true;
+            return function(){
+                if(mark){
+                    setTimeout(() => {
+                        fn();
+                        mark = true;
+                    }, 100);
+                }
+                mark = false;
+            }
+        }
+
+        window.onscroll = throttle(()=>{
+            if (document.documentElement.scrollTop > 10){
+                btn.style.display = "block";
+            }
+            else {
+                btn.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
